@@ -4,6 +4,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CommonModule } from '@angular/common';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { FormsModule } from '@angular/forms';
 // export interface IProduct {
 //   id: number;
 //   title: string;
@@ -24,7 +26,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProductListComponent, ProductDetailsComponent, CartComponent, CommonModule,RouterLink],
+  imports: [RouterOutlet, ProductListComponent, ProductDetailsComponent, CartComponent, CommonModule,RouterLink,AdminPanelComponent,FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
