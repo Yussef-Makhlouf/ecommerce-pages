@@ -3,11 +3,13 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { CartComponent } from './components/cart/cart.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
   { path: '', component: ProductListComponent },
   { path: 'product/:id', component:ProductDetailsComponent  },
   { path: 'admin-panel', component: AdminPanelComponent },
   { path: 'cart', component: CartComponent },
-  { path: '', redirectTo: '/products', pathMatch: 'full' }
+  { path: '', redirectTo: '/products', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent }
 ];
