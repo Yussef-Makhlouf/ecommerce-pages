@@ -3,7 +3,7 @@
   <div class="row mt-4">
     <div class="col-12">
       @if(!editMode){
-        <form *ngIf="!editMode" (ngSubmit)="addProduct()">
+        <form (ngSubmit)="addProduct()">
           <div class="form-group">
             <label for="title">Title</label>
             <input type="text" class="form-control" id="title" [(ngModel)]="newProduct.title" name="title" required>

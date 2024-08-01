@@ -20,6 +20,7 @@ export class AdminPanelComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchProducts();
+
   }
 
   fetchProducts(): void {
@@ -46,17 +47,27 @@ export class AdminPanelComponent implements OnInit {
       this.products[index] = updatedProduct;
       this.editMode = false;
       this.editProduct = { id: null, title: '', price: 0, description: '', category: '', image: '' };
+
     });
   }
 
   cancelEdit(): void {
     this.editMode = false;
+
+
     this.editProduct = { id: null, title: '', price: 0, description: '', category: '', image: '' };
+
   }
+
 
   deleteProduct(id: number): void {
     this.productService.deleteProduct(id).subscribe(() => {
       this.products = this.products.filter(product => product.id !== id);
+      this.editProduct = { id: null, title: '', price: 0, description: '', category: '', image: '' };
     });
   }
+    loadProducts(): void {
+    this.productService.getProducts().subscribe(products => this.products = products);
+  }
+
 }

@@ -12,4 +12,5 @@ export const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: '', redirectTo: '/products', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
+
 ];

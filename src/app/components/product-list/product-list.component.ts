@@ -27,9 +27,9 @@ export class ProductListComponent implements OnInit {
     });
   }
 
-  // getProductById(id: number): void {
-  //   this.route.navigate(['/', id]);
-  // }
+  getProductById(id: number): void {
+    this.route.navigate(['/', id]);
+  }
 
 
   addToCart(product: any): void {
